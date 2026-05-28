@@ -4,3 +4,20 @@ plataforma-web/
 # Documentos de artefatos (opcional — remova se quiser trackear)
 # primeiroStatusReport/
 # kickoff_requisitos/
+
+# Dependências
+node_modules/
+
+# Build Next.js
+.next/
+out/
+dist/
+
+# Variáveis de ambiente
+.env
+.env.local
+.env.*.local
+
+# Sistema
+.DS_Store
+Thumbs.db
