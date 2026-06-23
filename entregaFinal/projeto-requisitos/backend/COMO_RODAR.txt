@@ -1,0 +1,101 @@
+================================================================
+APRENDA+ — GUIA DE SETUP (Backend + Frontend)
+================================================================
+
+PRÉ-REQUISITO
+-------------
+Node.js 18 ou superior  →  https://nodejs.org
+
+================================================================
+ESTRUTURA DO PROJETO
+================================================================
+
+  backend/          ← Servidor Express (API)  — este repositório
+  plataforma-web/   ← Frontend Next.js        — NÃO está no Git
+
+================================================================
+RODANDO O BACKEND
+================================================================
+
+1. Entre na pasta backend:
+
+     cd backend
+
+2. Instale as dependências (só na primeira vez):
+
+     npm install
+
+3. Configure o arquivo .env copiando o exemplo:
+
+     cp .env.example .env
+     # Edite .env com as suas credenciais
+
+4. Rode o servidor:
+
+     npm run dev
+
+   O backend ficará disponível em:  http://localhost:3001
+
+================================================================
+RODANDO O FRONTEND (em outro terminal)
+================================================================
+
+1. Entre na pasta do frontend:
+
+     cd plataforma-web
+
+2. Instale as dependências (só na primeira vez):
+
+     npm install
+
+3. O arquivo .env.local já está configurado:
+
+     NEXT_PUBLIC_BACKEND_URL=http://localhost:3001
+
+4. Rode o frontend:
+
+     npm run dev
+
+   Abra o navegador em:  http://localhost:3000
+
+================================================================
+CONTAS DE TESTE (definidas no backend/.env)
+================================================================
+
+  Servidor:  servidor@plataforma.com  /  servidor123
+  Admin:     admin@plataforma.com     /  admin123
+
+================================================================
+BANCO DE DADOS
+================================================================
+
+Os dados ficam em:  backend/data/db.json  (criado automaticamente)
+
+Para resetar tudo, apague o arquivo:
+  rm backend/data/db.json
+
+================================================================
+VARIÁVEIS DE AMBIENTE DO BACKEND (.env)
+================================================================
+
+  PORT             Porta do servidor       (padrão: 3001)
+  FRONTEND_URL     URL do frontend         (padrão: http://localhost:3000)
+  JWT_SECRET       Chave secreta do token  (troque em produção!)
+  ADMIN_EMAIL      E-mail do admin
+  ADMIN_PASSWORD   Senha do admin
+  DEMO_EMAIL       E-mail do servidor demo
+  DEMO_PASSWORD    Senha do servidor demo
+
+================================================================
+INTEGRAÇÃO DE IA (pendente — Gemini API)
+================================================================
+
+Dois arquivos têm placeholders para substituir:
+
+  backend/src/routes/quiz.ts      → função generatePlaceholderQuestions()
+  backend/src/routes/ai-chat.ts   → resposta fixa
+
+Quando integrar o Gemini, adicione a chave no .env:
+  GEMINI_API_KEY=sua-chave-aqui
+
+================================================================

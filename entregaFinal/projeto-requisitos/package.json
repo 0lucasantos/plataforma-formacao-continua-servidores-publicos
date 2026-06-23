@@ -1,0 +1,11 @@
+{
+  "name": "plataforma-formacao-continua",
+  "private": true,
+  "scripts": {
+    "frontend:v1": "npm --prefix plataforma-web run dev",
+    "frontend:v2": "npm --prefix plataforma-webV2 run dev",
+    "frontend:v3": "npm --prefix plataforma-web-v3 run dev",
+    "frontend:v4": "npm --prefix plataforma-web-v4 run dev",
+    "backend": "npm --prefix backend run dev"
+  }
+}
